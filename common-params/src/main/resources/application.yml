@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: common-params
+nacos:
+  host: 127.0.0.1
+  port: 8848
+  username: nacos
+  password: nacos
+
+dubbo:
+  scan:
+    base-packages: com.jinlong.common.params.service
+  registry:
+    address: nacos://${nacos.host}:${nacos.port}/
+    #address: nacos://${nacos.host}:${nacos.port}/?username=${nacos.username}&password=${nacos.password}
+    ##如果要使用自己创建的命名空间可以使用下面2种方式
+    #dubbo.registry.address = nacos://10.20.153.10:8848?namespace=5cbb70a5-xxx-xxx-xxx-d43479ae0932
+    #dubbo.registry.parameters.namespace=5cbb70a5-xxx-xxx-xxx-d43479ae0932
+    parameters:
+      namespace: dc3aec53-2891-4225-be26-0503cf148ab8
+server:
+  port: 8090

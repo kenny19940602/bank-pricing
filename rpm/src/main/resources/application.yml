@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: rpm
+nacos:
+  host: 127.0.0.1
+  port: 8848
+  username: nacos
+  password: nacos
+
+dubbo:
+  registry:
+    address: nacos://${nacos.host}:${nacos.port}/
+    #address: nacos://${nacos.host}:${nacos.port}/?username=${nacos.username}&password=${nacos.password}
+    parameters:
+      namespace: dc3aec53-2891-4225-be26-0503cf148ab8
+server:
+  port: 8091
