@@ -1,6 +1,10 @@
 spring:
   application:
     name: common-params
+  datasource:
+    url: jdbc:mysql://localhost:3306/pricing?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password:
 nacos:
   host: 127.0.0.1
   port: 8848
@@ -20,3 +24,6 @@ dubbo:
       namespace: dc3aec53-2891-4225-be26-0503cf148ab8
 server:
   port: 8090
+mybatis:
+  mapper-locations:
+    - classpath:dto/*.xml
