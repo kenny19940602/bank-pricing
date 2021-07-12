@@ -9,17 +9,28 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>dubble-api</artifactId>
+    <artifactId>bank-pricing-security</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
-    <name>dubble-api</name>
-    <description>dubble-api for bank-pricing</description>
-
+    <name>bank-pricing-security</name>
+    <description>security for bank-pricing</description>
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
     <dependencies>
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+        </dependency>
+        <dependency>
             <groupId>com.jinlong</groupId>
-            <artifactId>bank-pricing-mbg</artifactId>
+            <artifactId>bank-pricing-common</artifactId>
         </dependency>
     </dependencies>
+
+
 
 </project>

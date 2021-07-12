@@ -34,12 +34,12 @@
         <javaClientGenerator type="XMLMAPPER" targetPackage="com.jinlong.bank.pricing.mbg.mapper"
                              targetProject="bank-pricing-mbg\src\main\java"/>
         <!--生成全部表tableName设为%-->
-        <table tableName="%">
-            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
-        </table>
-<!--        <table tableName="ums_role">-->
+<!--        <table tableName="%">-->
 <!--            <generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
 <!--        </table>-->
+        <table tableName="rpm_par_tax">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
 <!--        <table tableName="ums_admin_role_relation">-->
 <!--            <generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
 <!--        </table>-->

@@ -12,7 +12,8 @@
     <artifactId>bank-pricing-mbg</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>bank-pricing-mbg</name>
-    <description>mbg for bank-pricing-</description>
+    <packaging>jar</packaging>
+    <description>mbg for bank-pricing</description>
 
     <dependencies>
         <dependency>
