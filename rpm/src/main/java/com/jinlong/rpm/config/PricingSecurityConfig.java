@@ -1,12 +1,17 @@
 package com.jinlong.rpm.config;
 
+import com.jinlong.bank.pricing.mbg.model.UmsResource;
 import com.jinlong.bank.pricing.security.component.DynamicSecurityService;
 import com.jinlong.bank.pricing.security.config.SecurityConfig;
+import com.jinlong.rpm.service.UmsAdminService;
+import com.jinlong.rpm.service.UmsResourceService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.access.ConfigAttribute;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.core.userdetails.UserDetailsService;
 
 import java.util.List;
 import java.util.Map;
