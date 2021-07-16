@@ -24,6 +24,6 @@ dubbo:
       namespace: dc3aec53-2891-4225-be26-0503cf148ab8
 server:
   port: 8090
-mybatis:
-  mapper-locations:
-    - classpath:dto/*.xml
+#mybatis:
+#  mapper-locations:
+#    - classpath:dto/*.xml

@@ -23,14 +23,14 @@ public class RpmParTaxController {
     @DubboReference
     private RpmParTaxService service;
 
-    @ApiOperation("创建")
+    @ApiOperation("创建税率")
     @PostMapping("/tax/create")
     public CommonResult create(@RequestBody RpmParTax entity) {
         service.create(entity);
         return CommonResult.success(null);
     }
 
-    @ApiOperation("修改")
+    @ApiOperation("修改税率")
     @PostMapping("/tax/update/{id}")
     public CommonResult update(@PathVariable Long id, @RequestBody RpmParTax entity) {
         entity.setId(id);
@@ -38,21 +38,21 @@ public class RpmParTaxController {
         return CommonResult.success(null);
     }
 
-    @ApiOperation("删除")
+    @ApiOperation("删除税率")
     @PostMapping("/tax/delete/{id}")
     public CommonResult delete(@PathVariable Long id) {
         service.delete(id);
         return CommonResult.success(null);
     }
 
-    @ApiOperation("根据ID查询")
+    @ApiOperation("根据ID查询税率")
     @GetMapping("/tax/select/{id}")
     public CommonResult<RpmParTax> select(@PathVariable Long id) {
         RpmParTax entity = service.selectById(id);
         return CommonResult.success(entity);
     }
 
-    @ApiOperation("分页查询所有")
+    @ApiOperation("分页查询所有税率")
     @GetMapping("/tax/listAll")
     public CommonResult<CommonPage<RpmParTax>> listAll(@RequestParam(value = "pageNum", defaultValue = "1")
                                                       @ApiParam("页码") Integer pageNum,

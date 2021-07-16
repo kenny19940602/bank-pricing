@@ -20,20 +20,20 @@ import java.util.Collections;
 public class Swagger3Config {
     @Bean
     public Docket createRestApi(){
-        return new Docket(DocumentationType.SWAGGER_2)
+        return new Docket(DocumentationType.OAS_30)
                 .apiInfo(apiInfo())
-//                .securitySchemes(Collections.singletonList(HttpAuthenticationScheme.JWT_BEARER_BUILDER
-////                        显示用
-//                        .name("JWT")
-//                        .build()))
-//                .securityContexts(Collections.singletonList(SecurityContext.builder()
-//                        .securityReferences(Collections.singletonList(SecurityReference.builder()
-//                                .scopes(new AuthorizationScope[0])
-//                                .reference("JWT")
-//                                .build()))
-//                        // 声明作用域
-//                        .operationSelector(o -> o.requestMappingPattern().matches("/.*"))
-//                        .build()))
+                .securitySchemes(Collections.singletonList(HttpAuthenticationScheme.JWT_BEARER_BUILDER
+//                        显示用
+                        .name("JWT")
+                        .build()))
+                .securityContexts(Collections.singletonList(SecurityContext.builder()
+                        .securityReferences(Collections.singletonList(SecurityReference.builder()
+                                .scopes(new AuthorizationScope[0])
+                                .reference("JWT")
+                                .build()))
+                        // 声明作用域
+                        .operationSelector(o -> o.requestMappingPattern().matches("/.*"))
+                        .build()))
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.jinlong.rpm.controller"))
                 .paths(PathSelectors.any())

@@ -26,6 +26,7 @@ secure:
       - /swagger-resources/**
       - /swagger/**
       - /**/v2/api-docs
+      - /**/v3/api-docs
       - /**/*.js
       - /**/*.css
       - /**/*.png
@@ -40,8 +41,16 @@ secure:
       - /minio/upload
       - /swagger-ui/**
 
+mybatis:
+  mapper-locations:
+    - classpath*:dto/*.xml
 jwt:
   tokenHeader: Authorization #JWT存储的请求头
   secret: mall-admin-secret #JWT加解密使用的密钥
   expiration: 604800 #JWT的超期限时间(60*60*24*7)
   tokenHead: 'Bearer '  #JWT负载中拿到开头
+
+logging:
+  level:
+    root: info
+    com.jinlong: debug

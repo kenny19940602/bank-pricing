@@ -3,10 +3,12 @@ package com.jinlong.bank.pricing.mbg.dao;
 import com.jinlong.bank.pricing.mbg.model.UmsAdminRoleRelation;
 import com.jinlong.bank.pricing.mbg.model.UmsResource;
 import com.jinlong.bank.pricing.mbg.model.UmsRole;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
+@Mapper
 public interface UmsAdminRoleRelationDao {
     /**
      * 批量插入用户角色关系
